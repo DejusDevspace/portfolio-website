@@ -35,9 +35,16 @@ body, html {
     color: white;
 }
 
+.sidebar ul li {
+    transition: transform 0.3s;
+}
+
+.sidebar ul li:hover {
+    transform: scale(1.15);
+}
 /* Background styling */
 .hero-section {
-    background-image: url('bg-img.jpg'); /* Replace this with the path to the image */
+    background-image: url('bg-img.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -48,7 +55,7 @@ body, html {
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
     padding: 50px;
     text-align: center;
     color: #fff;
@@ -122,3 +129,97 @@ body, html {
     animation: waveAnimation 2s infinite;
 }
 
+/* About Page Styling */
+.about-section {
+    flex-grow: 1;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1300px;
+    height: 700px;
+    width: 100%;
+    text-align: left;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    opacity: 0.8;
+}
+
+.about-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-section h2 {
+    font-size: 2em;
+    margin-top: 30px;
+}
+
+.about-section ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.about-section ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.content {
+    background-color: rgb(82, 82, 92);
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.content h2 {
+    margin-top: 15px;
+}
+
+.content-span {
+    grid-column: 1 / span 2;
+}
+
+.skills {
+    margin: 0;
+    margin-block-start: 0;
+    padding-top: 0;
+}
+
+.skills ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 12px;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.skills ul li {
+    max-width: fit-content;
+    background-color: rgb(161, 146, 146);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 15px;
+    transition: transform 0.3s;
+}
+
+.skills ul li:hover {
+    transform: scale(1.07);
+}
