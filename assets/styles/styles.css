@@ -223,6 +223,10 @@ body, html {
     animation: fadeInDown 1.5s;
 }
 
+.summary {
+    animation: fadeInRight 1.5s;
+}
+
 .content-span {
     grid-column: 1 / span 2;
     animation: fadeInUp 1.5s;
@@ -274,6 +278,7 @@ body, html {
 
 .experience-item {
     margin: 20px 0px;
+    animation: fadeInLeft 1.5s;
 }
 
 .experience-item h2 {
@@ -292,6 +297,27 @@ body, html {
     font-size: 1rem;
 }
 
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 /* Contact page styling */
 .contact-flex {
     display: flex;
