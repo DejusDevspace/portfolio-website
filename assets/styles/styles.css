@@ -1,4 +1,3 @@
-/* Reset some default browser styles */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +10,7 @@ body, html {
     font-family: 'Arial', sans-serif;
 }
 
-    
+/* Home Page     */
 .sidebar {
     width: 80px;
     height: 100vh;
@@ -62,6 +61,7 @@ body, html {
 .sidebar ul li:hover {
     transform: scale(1.15);
 }
+
 /* Background styling */
 .hero-section {
     background-image: url('../img/bg-img.jpg');
@@ -214,7 +214,6 @@ body, html {
 }
 
 .content {
-    /* background-color: rgb(82, 82, 92); */
     border-radius: 10px;
     padding: 10px 15px;
 }
@@ -260,12 +259,40 @@ body, html {
     transform: scale(1.07);
 }
 
-.hobbies {
+.experience-box {
     background-color: #1f0b0b71;
-    /* overflow-y: scroll; */
+    border-radius: 10px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    padding: 10px 15px;
 }
 
-/* Contact styling */
+.experience-box::-webkit-scrollbar {
+    display: none;
+}
+
+.experience-item {
+    margin: 20px 0px;
+}
+
+.experience-item h2 {
+    margin: 0px;
+}
+.experience-item h3 {
+    margin: 5px auto;
+}
+
+.experience-item ul {
+    margin: 5px auto;
+    list-style: circle;
+}
+
+.experience-item p {
+    font-size: 1rem;
+}
+
+/* Contact page styling */
 .contact-flex {
     display: flex;
     justify-content: center;
@@ -299,7 +326,6 @@ body, html {
     background-image: url('../img/contact-img.jpg');
     background-size: cover;
     background-position: center;
-    /* width: 700px */
 }
 
 .contact-grid-details {
