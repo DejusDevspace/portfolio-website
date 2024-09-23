@@ -266,10 +266,77 @@ body, html {
 }
 
 /* Contact styling */
-.contact ul {
+.contact-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-grid {
+    background-color: #333;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1300px;
+    height: 700px;
+    width: 100%;
+    text-align: left;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    opacity: 0.8;
+}
+
+.contact-item {
+    padding: 40px;
+    align-content: center;
+}
+
+.contact-item h1 {
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+
+.contact-grid-img {
+    background-image: url('../img/contact-img.jpg');
+    background-size: cover;
+    background-position: center;
+    /* width: 700px */
+}
+
+.contact-grid-details {
+    background-color: #463a3a71;
+}
+
+.contact-grid-details ul {
     display: flex;
     flex-direction: column;
     gap: 24px;
     text-align: left;
     list-style: none;
 }
+
+.social-link {
+    display: inline-flex;
+    gap: 24px;
+    align-items: center;
+    list-style: none;
+    transition: transform 0.3s;
+    animation: fadeInUp 1.5s;
+}
+
+.social-link li {
+    font-size: 1.2rem;
+}
+
+.social-link a {
+    text-decoration: none;
+    color: white;
+}
+
+.social-link:hover {
+    transform: scale(1.05);
+}
+
+.social-link img {
+    height: 32px;
+}
+
