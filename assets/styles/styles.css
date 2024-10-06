@@ -392,3 +392,19 @@ body, html {
     height: 32px;
 }
 
+/* Work page styling */
+.work-display-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    background-color: blue;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.work-item {
+    background-color: red;
+    border-radius: 20px;
+    width: 400px;
+    height: 300px;
+}
