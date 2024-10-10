@@ -74,6 +74,12 @@ body, html {
     position: relative;
 }
 
+@media (max-width: 768px) {
+    .hero-section {
+        background-size: contain;
+    }
+}
+
 .overlay {
     background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
     padding: 50px;
@@ -98,6 +104,40 @@ body, html {
     font-size: 1.5em;
     margin-bottom: 10px;
     animation: fadeInDown 1.5s ease;
+}
+
+@media (max-width: 768px) {
+    .overlay {
+        padding: 20px;
+    }
+    .overlay h1 {
+        font-size: 2.5em;
+    }
+
+    .overlay p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 991px) {
+    .overlay h1 {
+        font-size: 3em;
+    }
+
+    .overlay p {
+        font-size: 1.2em;
+    }
+}
+
+/* Adjustments for small screens (mobiles) */
+@media (max-width: 576px) {
+    .overlay h1 {
+        font-size: 2em;
+    }
+
+    .overlay p {
+        font-size: 1em;
+    }
 }
 
 #intro-text {
@@ -132,17 +172,6 @@ body, html {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .overlay h1 {
-        font-size: 2.5em;
-    }
-
-    .overlay p {
-        font-size: 1em;
     }
 }
 
@@ -393,18 +422,79 @@ body, html {
 }
 
 /* Work page styling */
-.work-display-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 24px;
-    background-color: blue;
-    padding: 20px;
-    border-radius: 15px;
+.work-overlay {
+    justify-content: left;
+    text-align: left;
+    display: block;
+    padding: 72px 216px;
 }
 
-.work-item {
-    background-color: red;
-    border-radius: 20px;
-    width: 400px;
-    height: 300px;
+.work-heading {
+    justify-content: left;
+    align-items: left;
+    text-align: justify;
+}
+
+.experience-list ul {
+    display: grid;
+    gap: 24px;
+    /* margin: 48px auto; */
+    grid-template-columns: 1fr 1fr;
+}
+
+.project-list {
+    list-style-type: none;
+    padding: 0;
+    /* max-width: 800px; */
+    margin: 48px auto;
+}
+
+.project-item {
+    background: #333;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    opacity: 0.75;
+}
+
+.project-item i {
+    font-size: 40px;
+    color: #05000071;
+    margin-right: 15px;
+    position: fixed relative;
+    /* align-self: first baseline; */
+}
+
+.project-content {
+    flex: 1;
+}
+
+.project-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.project-title a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.project-title a:hover {
+    text-decoration: underline;
+}
+
+.project-description {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #a89a9a;
+}
+
+/* Add hover effect */
+.project-item:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s;
 }
