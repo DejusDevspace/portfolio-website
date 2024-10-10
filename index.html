@@ -12,27 +12,26 @@
     <link rel="stylesheet" href="assets/styles/styles.css" />
   </head>
   <body>
-    <header
-      class="container-fluid hero-section d-flex align-items-center justify-content-center"
-    >
+    <div class="hero-section">
+      <div class="toggle-button" id="toggle-button">
+        <i class="fa fa-bars"></i>
+      </div>
       <nav class="sidebar">
         <ul>
           <li>
-            <a href="/"><i class="fa fa-home fa-2x" title="Home"></i></a>
+            <a href="/"><i class="fa fa-home" title="Home"></i></a>
           </li>
           <li>
-            <a href="about.html"
-              ><i class="fa fa-user fa-2x" title="About"></i
-            ></a>
+            <a href="about.html"><i class="fa fa-user" title="About"></i></a>
           </li>
           <li>
             <a href="work.html"
-              ><i class="fa fa-briefcase fa-2x" title="Portfolio"></i
+              ><i class="fa fa-briefcase" title="Portfolio"></i
             ></a>
           </li>
           <li>
             <a href="contact.html"
-              ><i class="fa fa-envelope fa-2x" title="Contact"></i
+              ><i class="fa fa-envelope" title="Contact"></i
             ></a>
           </li>
         </ul>
@@ -41,20 +40,20 @@
         <ul>
           <li>
             <a href="docs/CV-Deju-Adejo.pdf" download="Deju+Adejo+Resume"
-              ><i class="fa fa-cloud-download fa-2x" title="Resume"></i
+              ><i class="fa fa-cloud-download" title="Resume"></i
             ></a>
           </li>
         </ul>
       </div>
-      <div class="overlay text-center">
-        <h1 class="display-4">Hi, I'm Deju <span class="wave">👋</span></h1>
-        <p class="lead">
+      <div class="overlay">
+        <h1>Hi, I'm Deju <span class="wave">👋</span></h1>
+        <p>
           Full Stack Data Scientist | Generative AI | MLOps | Backend Developer
         </p>
         <br />
-        <p id="intro-text lead"></p>
+        <p id="intro-text"></p>
       </div>
-    </header>
+    </div>
 
     <script src="assets/scripts/scripts.js"></script>
   </body>

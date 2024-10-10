@@ -10,7 +10,7 @@ body, html {
     font-family: monospace;
 }
 
-/* Home Page     */
+/* Header */
 .sidebar {
     width: 80px;
     height: 100vh;
@@ -21,17 +21,16 @@ body, html {
     position: fixed;
     top: 0;
     left: 0;
+    transition: transform 0.3s ease;
+    transform: translateX(0); /* Default position */
+    z-index: 1000; /* to ensure it is above other content */
 }
 
 .resume {
     position: fixed;
     right: 0;
-    top: 0;
-    padding: 24px;
-}
-
-.resume i {
-    color: white;
+    top: 20px;
+    padding-right: 24px;
 }
 
 .resume ul li {
@@ -47,11 +46,9 @@ body, html {
     display: flex;
     flex-direction: column;
     gap: 48px;
-    list-style: none;
-}
-
-.sidebar ul i {
-    color: white;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .sidebar ul li {
@@ -62,7 +59,69 @@ body, html {
     transform: scale(1.15);
 }
 
-/* Background styling */
+.toggle-button {
+    display: none; /* Hide toggle button by default */
+    border: none;
+    cursor: pointer; /* Pointer on hover */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001; /* Above the sidebar */
+    color: white;
+}
+
+i {
+    color: white;
+    font-size: 32px;
+}
+
+.sidebar ul i {
+    color: white;
+}
+
+@media (max-width: 480px) {
+    i {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        top: 20px;
+        left: auto;
+        align-items: center;
+        justify-content: start;
+        transform: translateX(-100%);
+        display: none;
+    }
+
+    .sidebar ul {
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .sidebar.active {
+        transform: translateX(0); /* Show the sidebar when active */
+        display: block;
+    }
+
+    .toggle-button {
+        display: block; /* Show toggle button on small screens */
+    }
+
+    i {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    i {
+        font-size: 24px; /* Slightly smaller icons on medium screens */
+    }
+}
+
+/* Home page styling */
 .hero-section {
     background-image: url('../img/bg-img.jpg');
     background-size: cover;
@@ -72,12 +131,6 @@ body, html {
     justify-content: center;
     align-items: center;
     position: relative;
-}
-
-@media (max-width: 768px) {
-    .hero-section {
-        background-size: contain;
-    }
 }
 
 .overlay {
@@ -106,6 +159,21 @@ body, html {
     animation: fadeInDown 1.5s ease;
 }
 
+#intro-text {
+    animation: fadeInUp 2s ease-in;
+}
+
+.wave {
+    display: inline-block;
+    animation: waveAnimation 2s infinite;
+}
+
+/* @media (max-width: 768px) {
+    .hero-section {
+        background-size: contain;
+    }
+} */
+ 
 @media (max-width: 768px) {
     .overlay {
         padding: 20px;
@@ -129,7 +197,6 @@ body, html {
     }
 }
 
-/* Adjustments for small screens (mobiles) */
 @media (max-width: 576px) {
     .overlay h1 {
         font-size: 2em;
@@ -138,10 +205,6 @@ body, html {
     .overlay p {
         font-size: 1em;
     }
-}
-
-#intro-text {
-    animation: fadeInUp 2s ease-in;
 }
 
 @keyframes fadeIn {
@@ -184,11 +247,6 @@ body, html {
     50% { transform: rotate(10deg); }
     60% { transform: rotate(0deg); }
     100% { transform: rotate(0deg); }
-}
-
-.wave {
-    display: inline-block;
-    animation: waveAnimation 2s infinite;
 }
 
 /* About Page Styling */
@@ -438,7 +496,6 @@ body, html {
 .experience-list ul {
     display: grid;
     gap: 24px;
-    /* margin: 48px auto; */
     grid-template-columns: 1fr 1fr;
 }
 
@@ -493,8 +550,42 @@ body, html {
     color: #a89a9a;
 }
 
-/* Add hover effect */
 .project-item:hover {
     transform: translateY(-2px);
     transition: transform 0.2s;
+}
+
+@media (max-width: 992px) {
+    .experience-list ul {
+        grid-template-columns: 1fr; 
+    }
+    
+    .project-list {
+        margin: 24px auto;
+    }
+    
+    .project-item {
+        padding: 15px;
+
+    }
+}
+
+@media (min-width: 769) and (max-width: 992px) {
+    .experience-list ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-item i {
+        font-size: 30px; /* Reduce icon size on small screens */
+    }
+
+    .project-title {
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .project-description {
+        font-size: 12px; /* Smaller font for description */
+    }
 }
