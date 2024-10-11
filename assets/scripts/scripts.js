@@ -1,3 +1,26 @@
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the current page URL
+  const currentPage = window.location.pathname;
+  // console.log(currentPage);
+
+  // Find all the navigation links
+  const navLinks = document.querySelectorAll(".sidebar a");
+
+  // Loop through links and set active class if the href matches the current page
+  navLinks.forEach((link) => {
+    // console.log(link.getAttribute("href"));
+    if (currentPage.length > 1) {
+      if (`/${link.getAttribute("href")}` === currentPage) {
+        link.classList.add("active");
+      }
+    } else {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    }
+  });
+});
+
 // Navbar toggling
 const toggleButton = document.getElementById("toggle-button");
 const sidebar = document.querySelector(".sidebar");
@@ -40,5 +63,8 @@ function typeWriterEffect(text, typingSpeed) {
 
 // Call the typewriter effect when the page loads
 window.onload = function () {
-  typeWriterEffect(text, typingSpeed);
+  const currentPage = window.location.pathname;
+  if (currentPage === "/") {
+    typeWriterEffect(text, typingSpeed);
+  }
 };

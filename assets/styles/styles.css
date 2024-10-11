@@ -60,6 +60,19 @@ body, html {
     transform: scale(1.15);
 }
 
+i {
+    color: white;
+    font-size: 32px;
+}
+
+.sidebar i {
+    opacity: 0.3;
+}
+
+.sidebar a.active i {
+    opacity: 1;
+}
+
 .toggle-button {
     display: none; /* Hide toggle button by default */
     border: none;
@@ -68,15 +81,6 @@ body, html {
     top: 20px;
     left: 20px;
     z-index: 1001; /* Above the sidebar */
-    color: white;
-}
-
-i {
-    color: white;
-    font-size: 32px;
-}
-
-.sidebar ul i {
     color: white;
 }
 
