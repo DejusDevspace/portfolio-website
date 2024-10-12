@@ -402,6 +402,17 @@ i {
     }
 }
 
+@media (max-width: 768px) {
+    .skills ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .skills ul li {
+        max-width: none;
+    }
+}
+
 @media (max-width: 576px) {
     .content-wrapper h2 {
         font-size: 1.5rem;
@@ -424,7 +435,6 @@ i {
     }
 
     .skills ul {
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
 
@@ -446,6 +456,10 @@ i {
 
     .skills ul {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .about-section {
+        padding: 20px;
     }
 }
 
