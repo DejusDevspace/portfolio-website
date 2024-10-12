@@ -174,12 +174,6 @@ i {
     animation: waveAnimation 2s infinite;
 }
 
-/* @media (max-width: 768px) {
-    .hero-section {
-        background-size: contain;
-    }
-} */
- 
 @media (max-width: 768px) {
     .overlay {
         padding: 20px;
